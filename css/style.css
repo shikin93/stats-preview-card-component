@@ -106,10 +106,12 @@ img {
 }
 
 @media (min-width: 991px) {
+  main {
+    margin-top: 30vh;
+  }
   .preview {
     display: flex;
     max-width: 850px;
-    margin-top: 30vh;
   }
   .preview__image {
     border-radius: 0 0.5em 0.5em 0;
