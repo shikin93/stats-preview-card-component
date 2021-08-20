@@ -1,0 +1,147 @@
+/* Global */
+:root {
+  --mainBackground: hsl(233, 47%, 7%);
+  --cardBackground: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --mainParagraph: hsla(0, 0%, 100%, 0.75);
+  --statHeading: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  background-color: var(--mainBackground);
+  color: var(--white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--accent);
+}
+
+/* Section Preview*/
+.preview {
+  background-color: var(--cardBackground);
+  color: var(--white);
+  max-width: 90%;
+  margin: 5rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 13px #000;
+}
+
+.preview__image {
+  border-radius: 0.5em 0.5em 0 0;
+  background: url('../images/image-header-mobile.jpg') no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.preview__image--overlay {
+  background-color: rgba(150, 25, 207, 0.486);
+  border-radius: 0.5em 0.5em 0 0;
+  height: 250px;
+  opacity: 0.9;
+}
+
+.preview__article {
+  padding: 2.5em 2.2em;
+  text-align: center;
+}
+
+.preview__article--header {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+
+.preview__article--header .highlight {
+  color: var(--accent);
+}
+
+.preview__article--content {
+  color: var(--mainParagraph);
+  line-height: 1.5;
+}
+
+.preview__status {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
+  padding-bottom: 2.5em;
+}
+
+.preview__status .stat {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.preview__status p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.8rem;
+  padding-top: 0.5em;
+  font-weight: 500;
+  color: var(--statHeading);
+}
+
+/* Breakpoints */
+@media (min-width: 768px) {
+  .preview {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 991px) {
+  .preview {
+    display: flex;
+    max-width: 850px;
+    margin-top: 30vh;
+  }
+  .preview__image {
+    border-radius: 0 0.5em 0.5em 0;
+    flex-basis: 45%;
+    height: auto;
+    order: 2;
+  }
+  .preview__image--overlay {
+    border-radius: 0 0.5em 0.5em 0;
+    height: 100%;
+  }
+
+  .container {
+    flex-basis: 55%;
+    order: 1;
+  }
+
+  .preview__article {
+    padding: 4em 6em 2em 4em;
+    text-align: left;
+  }
+
+  .preview__article--content {
+    padding: 1em 0;
+    font-size: 0.8rem;
+  }
+
+  .preview__status {
+    flex-direction: row;
+    padding: 0 5em 4em;
+    font-size: 0.8em;
+    gap: 4em;
+    text-align: left;
+  }
+}
